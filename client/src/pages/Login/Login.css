@@ -22,7 +22,7 @@
 
 .login-img{
     position: absolute;
-    top: 90%;
+    top: 100%;
     left: 0%;
     width: 100%;
     animation: float 4s ease-in-out infinite;
@@ -33,6 +33,6 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-50px);
+      transform: translateY(-40px);
     }
   }
