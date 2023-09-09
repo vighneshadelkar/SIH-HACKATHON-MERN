@@ -1,0 +1,14 @@
+/* .coursesContainer{
+    width: 100%;
+} */
+
+.coursesWrapper{
+    display: flex;
+    padding: 30px;
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 0;
+    gap: 15px;
+    width: max-content;
+}
+

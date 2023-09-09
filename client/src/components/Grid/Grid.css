@@ -1,0 +1,116 @@
+.gridConatiner{
+    width: 100%;
+}
+
+.item2 
+{ 
+    grid-area: menu;
+    border-radius: 20px;
+    background-color: rgb(88, 31, 230);
+    padding: 10px;
+    color: white;
+ }
+
+ .item2:hover
+ {
+    color: white;
+    grid-area: menu;
+    border-radius: 20px;
+    background-color: rgb(114, 68, 231);
+    padding: 10px;
+ }
+
+ .item3 
+{ 
+    color: white;
+    grid-area: main;
+    border-radius: 20px;
+    background-color: rgb(207, 229, 254);
+    padding: 10px;
+    height: 170px;
+ }
+
+ .item3:hover 
+ { 
+    color: white;
+    grid-area: main;
+    border-radius: 20px;
+    background-color: rgb(197, 217, 236);
+    padding: 10px;
+ }
+
+ .item4 
+{ 
+    color: white;
+    grid-area: right;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1B1C20;
+    max-width: 70%;
+ }
+
+ .item4:hover { 
+    color: white;
+    grid-area: right;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #2c2d32;
+    max-width: 70%;
+ }
+
+ .item5 
+{ 
+    color: white;
+    grid-area: footer;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(245, 219, 40);
+
+ }
+
+ .item5:hover { 
+    color: white;
+    grid-area: footer;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(243, 223, 99);
+ }
+
+ .item6{
+    color: rgb(0, 0, 0);
+    grid-area: footer2;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    border: 5px solid black;
+ }
+
+ .item6:hover{
+    color: white;
+    grid-area: footer2;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(224, 221, 216);
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+ }
+
+ .gridWrapper {
+    display: grid;
+    grid-template-areas:
+      'menu menu main main right right'
+      'menu menu footer footer2 right right';
+    gap: 12px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .plus{
+    justify-content: center;
+    align-items: center;
+    margin-left: 27%;
+  }

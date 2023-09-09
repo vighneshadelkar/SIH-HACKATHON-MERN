@@ -1,0 +1,38 @@
+.cardImgDiv{
+    object-fit: cover;
+  }
+  .cardImg{
+    /* object-fit: cover; */
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  .cardsDiv{
+    background-color: #d3d3d3;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+
+  .card{
+    background-color: rgb(255, 255, 255);
+    /* width: 100%; */
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* height: 400px; */
+    gap: 10px;
+  }
+
+  .startbtn{
+    background:rgb(255,2,100) ;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+

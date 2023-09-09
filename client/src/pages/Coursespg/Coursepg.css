@@ -1,0 +1,12 @@
+.coursespgContainer{
+    width: 100%;
+}
+
+.coursespgWrapper{
+    display: flex;
+} 
+
+.main{
+    flex: 11;
+    width: 100%;
+}

@@ -1,0 +1,15 @@
+.homeContainer{
+    /* display: flex; */
+    width: 100%;
+}
+
+.homeWrapper{
+    display: flex;
+    /* width: 100%; */
+} 
+
+.main{
+    flex: 11;
+    width: 100%;
+}
+
