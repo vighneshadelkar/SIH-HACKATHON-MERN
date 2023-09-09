@@ -1,3 +1,38 @@
 .loginContainer{
     width: 100%;
+    background-color: rgb(233,233,233);
+    height: 100vh;
 }
+
+.loginWrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.imgcol{
+    flex: 6;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.formContainer{
+    flex: 6;
+}
+
+.login-img{
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+  }
