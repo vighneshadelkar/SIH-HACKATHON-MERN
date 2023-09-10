@@ -8,7 +8,7 @@ export default function Progress() {
         <div className="progressText">
           <small>Hi, Vighnesh!</small>
           <h1>
-            You have completed 6 lessions this week
+            You have completed 6 lessons this week
           </h1>
           <button className="pg-btn">SEE ALL</button>
         </div>

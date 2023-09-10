@@ -6,9 +6,7 @@ export default function Sidebar() {
   return (
     <div className="sidebarContainer">
       <div class="sidebar">
-        <a class="active" href="#home">
-          HOME
-        </a>
+        <NavLink to={"/"}>HOME</NavLink>
         <NavLink to={"/courses"}>COURSES</NavLink>
         <NavLink to={"/"}>LOGIN</NavLink>
         <NavLink to={"/profile"}>PROFILE</NavLink>
