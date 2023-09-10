@@ -1,6 +1,7 @@
 import React from "react";
 import "./Stats.css";
 import StatsChart from "../Chart/StatsChart";
+import Calendar from "react-calendar";
 
 export default function Stats() {
   return (
@@ -22,6 +23,7 @@ export default function Stats() {
           <StatsChart />
         </div>
       </div>
+      <Calendar />
     </div>
   );
 }

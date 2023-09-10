@@ -2,6 +2,7 @@
     background-color: aliceblue;
     padding: 20px;
     border-radius: 10px;
+    height: fit-content;
 }
 
 .statsContainer{
@@ -11,4 +12,9 @@
 
 #stcd3{
     display: flex;
+}
+
+.stats{
+    display: flex;
+    gap: 20px;
 }
