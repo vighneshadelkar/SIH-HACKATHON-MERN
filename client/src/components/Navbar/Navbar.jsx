@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import Img1 from "../../images/cd1.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -16,7 +17,7 @@ export default function Navbar() {
         </form>
         <div className="navInfo">
           <h4>NOTIFICATIONS</h4>
-          <img src={Img1} alt="" class="prfPic" />
+          <NavLink to={"/profile"}><img src={Img1} alt="" class="prfPic" /></NavLink>
         </div>
       </div>
     </nav>

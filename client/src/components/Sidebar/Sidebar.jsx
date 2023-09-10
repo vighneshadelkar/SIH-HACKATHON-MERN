@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -8,9 +9,9 @@ export default function Sidebar() {
         <a class="active" href="#home">
           HOME
         </a>
-        <a href="#news">COURSES</a>
-        <a href="#contact">GAMES</a>
-        <a href="#about">About</a>
+        <NavLink to={"/courses"}>COURSES</NavLink>
+        <NavLink to={"/"}>LOGIN</NavLink>
+        <NavLink to={"/profile"}>PROFILE</NavLink>
       </div>
     </div>
   );
