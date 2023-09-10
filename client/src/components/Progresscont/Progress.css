@@ -37,9 +37,31 @@
     background-color: rgb(237,250,83);
 }
 
+#cd1:hover{
+    background-color: rgb(192,168,254);
+    animation: move 1s linear infinite;
+}
+#cd2:hover{
+    background-color: rgb(254,230,194);
+    animation: move 1s linear infinite;
+}
+#cd3:hover{
+    background-color: rgb(237,250,83);
+    animation: move 1s linear infinite;
+}
+
 .pg-btn{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 10px;
     border: 0;
 }
+
+@keyframes move {
+    0%,100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+  }

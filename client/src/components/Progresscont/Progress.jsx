@@ -3,7 +3,7 @@ import "./Progress.css";
 
 export default function Progress() {
   return (
-    <div className="progress">
+    <div className="progress" data-aos="fade-down" data-aos-duration="500">
       <div className="progressWrapper">
         <div className="progressText">
           <small>Hi, Vighnesh!</small>
@@ -13,7 +13,7 @@ export default function Progress() {
           <button className="pg-btn">SEE ALL</button>
         </div>
         <div className="cards" >
-          <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="500">
+          <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="750">
             <div class="card" id="cd1">
               <h2 class="title">Title</h2>
               <h3>Design Composition</h3>
@@ -24,7 +24,7 @@ export default function Progress() {
           <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="1000">
             <div class="card" id="cd2">
               <div className="cardHead">
-                <h5>01</h5>
+                <h5>Title</h5>
               </div>
               <h3>Design Composition</h3>
               <span>100% COMPLETED</span>
