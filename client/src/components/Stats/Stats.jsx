@@ -8,7 +8,7 @@ export default function Stats() {
     <div className="stats">
       <div className="statsContainer">
         <div className="Cards">
-          <div className="statsCard">
+          <div className="statsCard" >
             <h1>02</h1>
             <p>Courses Completed</p>
           </div>
@@ -26,24 +26,66 @@ export default function Stats() {
         </div>
         <h2>My Assignments</h2>
         <ul className="courseList">
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
         </ul>
       </div>
       <div className="col2">
         <Calendar id="calender" />
         <h2>Upcoming</h2>
         <ul className="courseList">
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
-          <li className="listItem">Course 1</li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
+          <li className="listItem" data-aos="zoom-in">
+            Course 1
+          </li>
         </ul>
       </div>
     </div>

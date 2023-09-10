@@ -12,8 +12,8 @@ export default function Progress() {
           </h1>
           <button className="pg-btn">SEE ALL</button>
         </div>
-        <div className="cards">
-          <div className="cardContainer">
+        <div className="cards" >
+          <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="500">
             <div class="card" id="cd1">
               <h2 class="title">Title</h2>
               <h3>Design Composition</h3>
@@ -21,7 +21,7 @@ export default function Progress() {
     
             </div>
           </div>
-          <div className="cardContainer" >
+          <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="1000">
             <div class="card" id="cd2">
               <div className="cardHead">
                 <h5>01</h5>
@@ -30,7 +30,7 @@ export default function Progress() {
               <span>100% COMPLETED</span>
             </div>
           </div>
-          <div className="cardContainer">
+          <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="1500">
             <div class="card" id="cd3">
               <h2 class="title">Title</h2>
               <h3>Design Composition</h3>
