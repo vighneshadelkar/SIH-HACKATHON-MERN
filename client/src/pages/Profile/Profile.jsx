@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Grid from "../../components/Grid/Grid";
 import "./Profile.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Progress from "../../components/Progresscont/Progress";
@@ -13,12 +12,11 @@ export default function Profile() {
         <Sidebar />
         <div className="main">
           <Navbar />
-          {/* <Grid /> */}
           <h2>My Progress</h2>
-          <Progress/>
+          <Progress />
           <div className="container">
-          <h2>Statistics</h2>
-          <Stats/>
+            <h2>Statistics</h2>
+            <Stats />
           </div>
         </div>
       </div>
