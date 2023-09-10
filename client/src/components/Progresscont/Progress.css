@@ -1,0 +1,45 @@
+.progress{
+    background-color: rgb(42,43,71);
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    width: 80%;
+    /* height: 100%; */
+    
+}
+
+.progressWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+.card{
+    width: 80%;
+    height: fit-content;
+    color: rgb(35,42,69);
+}
+#cd1{
+    background-color: rgb(192,168,254);
+}
+#cd2{
+    background-color: rgb(254,230,194);
+}
+#cd3{
+    background-color: rgb(237,250,83);
+}
+
+.pg-btn{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    border: 0;
+}
