@@ -5,7 +5,7 @@
     height: fit-content;
 }
 
-.statsContainer{
+.Cards{
     display: flex;
     gap: 30px;
 }
@@ -16,5 +16,19 @@
 
 .stats{
     display: flex;
-    gap: 20px;
+    gap: 70px;
+    height: 100vh;
+}
+
+.courseList{
+    list-style: none;
+    gap: 10px;
+    margin-left: 0;
+}
+
+.listItem{
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
 }
