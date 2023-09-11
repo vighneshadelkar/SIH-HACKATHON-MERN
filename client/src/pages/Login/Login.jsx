@@ -1,6 +1,6 @@
 import React,{useContext,useState} from "react";
 import loginimg from "../../images/login-pic.jpg";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./Login.css"
 
@@ -28,9 +28,10 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(loginData)
     const res = await fetch("http://localhost:5000/auth/login", {
       method: "POST",
+      mode: "cors",
       body: JSON.stringify(loginData),
       headers: {
         "Content-Type": "application/json",
@@ -52,8 +53,6 @@ export default function Login() {
       });
     }
   };
-
-  console.log(AuthUser);
 
   setTimeout(() => {
     if (isLoggedIn) {

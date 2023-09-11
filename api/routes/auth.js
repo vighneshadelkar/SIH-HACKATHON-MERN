@@ -93,22 +93,22 @@ Authrouter.post('/login', async (req, res) => {
             user.token = token;
             user.password = undefined;
 
-            // // cookies
+            // cookies
 
-            // const option = {
-            //     expires: new Date(Date.now() + 1000 * 60 * 60),
-            //     httpOnly: true
-            // }
+            const option = {
+                expires: new Date(Date.now() + 1000 * 60 * 60),
+                httpOnly: true
+            }
 
-            // // send token in user cookie
-            // res.status(200).json(user);
+            // send token in user cookie
+            res.status(200).json(user);
 
-            // res.status(200).cookie("token", token, option).json({
-            //     success: true
-            // })
-            res.status(200).json({
+            res.status(200).cookie("token", token, option).json({
                 success: true
             })
+            // res.status(200).json({
+            //     success: true
+            // })
         }
     } catch (error) {
         res.status(401).json({message:"error"});
