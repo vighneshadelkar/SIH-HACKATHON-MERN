@@ -1,11 +1,10 @@
-import React,{useContext,useState} from "react";
+import React, { useContext, useState } from "react";
 import loginimg from "../../images/login-pic.jpg";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import "./Login.css"
+import "./Login.css";
 
 export default function Login() {
-
   const [loginData, setloginData] = useState({
     email: "",
     password: "",
@@ -28,7 +27,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(loginData)
+    console.log(loginData);
     const res = await fetch("http://localhost:5000/auth/login", {
       method: "POST",
       mode: "cors",
@@ -43,7 +42,6 @@ export default function Login() {
     if (!res.ok) {
       setisLoggedIn(false);
       console.error();
-
     } else {
       setAuthUser(result);
       setisLoggedIn(true);
@@ -68,34 +66,34 @@ export default function Login() {
         </div>
         <div className="formContainer">
           <h2>WELCOME BACK !!</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3 row">
-              <div className="col-sm-10">
-                <input
-                  type="email"
-                  className="signupItem"
-                  id="signupEmail"
-                  name="email"
-                  value={loginData.email}
-                  onChange={handleInput}
-                  required
-                />
-              </div>
+          <form onSubmit={handleSubmit} className="loginForm">
+            <div className="col-sm-10">
+              <input
+                type="email"
+                className="signupItem"
+                id="signupEmail"
+                name="email"
+                value={loginData.email}
+                onChange={handleInput}
+                placeholder="Email"
+                required
+              />
             </div>
-            <div className="mb-3 row">
-              <div className="col-sm-10">
-                <input
-                  type="password"
-                  className="signupItem"
-                  id="signupPass"
-                  name="password"
-                  value={loginData.password}
-                  onChange={handleInput}
-                  required
-                />
-              </div>
+
+            <div className="col-sm-10">
+              <input
+                type="password"
+                className="signupItem"
+                id="signupPass"
+                name="password"
+                value={loginData.password}
+                placeholder="Password"
+                onChange={handleInput}
+                required
+              />
             </div>
-            <button className="btn-primary">Submit</button>
+
+            <button className="signupSubmit">Submit</button>
           </form>
         </div>
       </div>
