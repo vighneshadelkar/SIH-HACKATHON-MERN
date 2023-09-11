@@ -1,6 +1,7 @@
 import React,{useContext,useState} from "react";
 import loginimg from "../../images/login-pic.jpg";
 import { useNavigate, Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import "./Login.css"
 
 export default function Login() {
@@ -56,7 +57,7 @@ export default function Login() {
 
   setTimeout(() => {
     if (isLoggedIn) {
-      navigate("/");
+      navigate("/profile");
     }
   }, 100);
 
