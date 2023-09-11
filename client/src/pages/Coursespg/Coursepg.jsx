@@ -11,7 +11,7 @@ export default function Coursepg() {
         <Sidebar />
         <div className="main">
           <Navbar />
-          <h2 class="name">Hello Vighnesh,Welcome Back.</h2>
+          <h2 className="name">Hello Vighnesh,Welcome Back.</h2>
           <div className="courses" >
 
           <Courses />

@@ -6,10 +6,10 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav>
-      <div class="navbar">
+      <div className="navbar">
         <form role="search">
           <input
-            class="search"
+            className="search"
             type="search"
             placeholder="Search"
             aria-label="Search"
@@ -17,7 +17,7 @@ export default function Navbar() {
         </form>
         <div className="navInfo">
           <h4>NOTIFICATIONS</h4>
-          <NavLink to={"/profile"}><img src={Img1} alt="" class="prfPic" /></NavLink>
+          <NavLink to={"/profile"}><img src={Img1} alt="profile pic" className="prfPic" /></NavLink>
         </div>
       </div>
     </nav>

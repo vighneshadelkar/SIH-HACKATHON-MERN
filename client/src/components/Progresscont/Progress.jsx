@@ -14,25 +14,25 @@ export default function Progress() {
         </div>
         <div className="cards" >
           <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="750">
-            <div class="card" id="cd1">
-              <h2 class="title">Title</h2>
+            <div className="card" id="cd1">
+              <h2 className="title">Title</h2>
               <h3>Design Composition</h3>
               <span>100% COMPLETED</span>
     
             </div>
           </div>
           <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="1000">
-            <div class="card" id="cd2">
+            <div className="card" id="cd2">
               <div className="cardHead">
-                <h5>Title</h5>
+                <h5 className="title">Title</h5>
               </div>
               <h3>Design Composition</h3>
               <span>100% COMPLETED</span>
             </div>
           </div>
           <div className="cardContainer" data-aos="zoom-in-left" data-aos-duration="1500">
-            <div class="card" id="cd3">
-              <h2 class="title">Title</h2>
+            <div className="card" id="cd3">
+              <h2 className="title">Title</h2>
               <h3>Design Composition</h3>
               <span>100% COMPLETED</span>
             </div>
