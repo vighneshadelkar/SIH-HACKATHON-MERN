@@ -25,8 +25,6 @@ export default function Feed() {
   return (
     <div className="feed">
       <div className="feedWrapper">
-        {/* <Share /> */}
-
         <div className="posts">
           <h2 className="header">Blogs</h2>
           <hr></hr>
