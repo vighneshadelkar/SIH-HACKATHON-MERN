@@ -5,6 +5,7 @@ import Profile from './pages/Profile/Profile';
 import Coursepg from './pages/Coursespg/Coursepg';
 import Aos from "aos"
 import Login from './pages/Login/Login';
+import Scramble from './components/Games/Scramble';
 import { AuthContext } from './context/AuthContext';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/profile" element={<Profile />}></Route>
           <Route exact path="/courses" element={<Coursepg />}></Route>
           <Route exact path="/" element={<Login />}></Route>
+          <Route exact path="/scramble" element={<Scramble />}></Route>
         </Routes>
       </BrowserRouter></AuthContext.Provider>
 
