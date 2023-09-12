@@ -16,6 +16,7 @@ nav{
     padding: 5px;
     border: 0;
     width: 300px;
+    outline-color: rgb(0, 174, 255);
 }
 .navInfo{
     display: flex;
@@ -29,3 +30,5 @@ nav{
     height: 40px;
     width: 40px;
 }
+
+

@@ -1,8 +1,8 @@
-.cardImgDiv{
+  .cardImgDiv{
     object-fit: cover;
   }
+
   .cardImg{
-    /* object-fit: cover; */
     border-radius: 20px;
     max-width: 100%;
   }
@@ -23,7 +23,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 400px; */
     gap: 10px;
   }
 

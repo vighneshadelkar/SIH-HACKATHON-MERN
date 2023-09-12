@@ -26,11 +26,12 @@ export default function Feed() {
     <div className="feed">
       <div className="feedWrapper">
         {/* <Share /> */}
-        <h2 className="header">Blogs</h2>
-        <hr></hr>
+
         <div className="posts">
+          <h2 className="header">Blogs</h2>
+          <hr></hr>
           {Postdata.map((item) => {
-            return <Post key={item._id} {...item} />;
+            return <Post key={item.id} {...item} />;
           })}
         </div>
       </div>

@@ -38,7 +38,7 @@ export default function Post(props) {
   },[])
 
   return (
-    <div className="post" data-aos="fade-left">
+    <div className="post" data-aos="fade-right">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postUser">
@@ -53,9 +53,11 @@ export default function Post(props) {
         <div className="postContent">
           
           <article className="postText">{props.text}</article>
-          <div className="imageDiv">
+          {/* <div className="imageDiv">
           <img src={Img1} alt="" className="postImg" />
-          </div>
+          <br></br>
+          <img src={Img1} alt="" className="postImg" />
+          </div> */}
         </div>
         <hr></hr>
         <div className="postBottom">
