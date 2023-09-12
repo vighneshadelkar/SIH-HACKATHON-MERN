@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-// import { Person, ThumbUp } from "@mui/icons-material";
+import { Person, ThumbUp } from "@mui/icons-material";
 import "./Post.css";
 
 export default function Post(props) {
@@ -10,10 +10,10 @@ export default function Post(props) {
   });
 
 
-  // function handleLike() {
-  //   setisLiked(!isLiked);
-  //   setlike(isLiked ? like - 1 : like + 1);
-  // }
+  function handleLike() {
+    setisLiked(!isLiked);
+    setlike(isLiked ? like - 1 : like + 1);
+  }
 
   async function getUsers(){
     let res = await fetch("http://localhost:5000/users",{
@@ -55,10 +55,10 @@ export default function Post(props) {
         <hr></hr>
         <div className="postBottom">
           <div className="postBottomleft">
-            {/* <ThumbUp
+            <ThumbUp
               className={isLiked ? "postLiked" : "postNotLiked"}
               onClick={handleLike}
-            /> */}
+            />
             <span className="postLikecounter">{props.likes} people liked</span>
           </div>
           <div className="postBottomright">
