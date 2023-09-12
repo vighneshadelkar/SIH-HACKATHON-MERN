@@ -35,13 +35,9 @@ export default function Scramble() {
   };
 
   const start = () => {
-    console.log("Button clicked!");
     setQuestionsVisible(true);
-    console.log(questionsVisible);
     initGame();
   };
-
-  // ... (previous code)
 
   const endGame = () => {
     clearInterval(timer);
@@ -92,8 +88,6 @@ export default function Scramble() {
     }
   };
 
-  // ... (rest of the code)
-
   const checkWord = () => {
     let userWord = inputValue.toLowerCase();
 
@@ -143,7 +137,7 @@ export default function Scramble() {
   };
 
   useEffect(() => {
-    initGame(); // Start a new game when the component mounts
+    initGame(); 
   }, []);
 
   return (
