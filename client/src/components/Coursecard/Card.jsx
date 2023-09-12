@@ -1,4 +1,5 @@
 import React from "react";
+import ProgressBar from "react-bootstrap/ProgressBar";
 import "./Card.css";
 
 export default function Card(props) {
@@ -13,16 +14,8 @@ export default function Card(props) {
           <img src={props.image} alt="" className="cardImg" />
         </div>
         <h2 className="title">Title</h2>
-        <div
-          className="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        >
-          {/* <div class="progress-bar" style="width: 100%"></div> */}
-        </div>
+        <ProgressBar now={100} variant="primary" />
+
         <span>100% COMPLETED</span>
         <button className="startbtn">LEVEL COMPLETED</button>
       </div>
