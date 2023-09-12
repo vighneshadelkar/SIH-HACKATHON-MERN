@@ -1,11 +1,16 @@
-import React from "react";
+import React,{useContext} from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import "./Profile.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Progress from "../../components/Progresscont/Progress";
 import Stats from "../../components/Stats/Stats";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Profile() {
+
+  const { AuthUser, setAuthUser, isLoggedIn, setisLoggedIn } =
+    useContext(AuthContext);
+
   return (
     <div className="profileConatiner">
       <div className="profileWrapper">

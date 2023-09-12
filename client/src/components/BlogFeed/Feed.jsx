@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Post from "../Blogcard/Post";
 import Postdata from "../../Data/Postdata";
-// import Share from "../Share/Share";
 import "./Feed.css";
 
 export default function Feed() {
