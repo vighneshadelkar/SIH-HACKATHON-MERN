@@ -1,0 +1,35 @@
+.post{
+    margin-top: 20px;
+    -webkit-box-shaow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    border-radius: 15px;
+}
+
+.postWrapper{
+    padding: 10px;
+}
+
+.postBottom{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postTop{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postNotLiked{
+    color: rgb(158, 200, 237);
+}
+
+.postLiked{
+    color: rgb(0, 94, 255);
+}
+
+.postUser{
+    align-items: center;
+    display: flex;
+}
