@@ -8,7 +8,7 @@ const words = [
       hint: "The legal right to care for and make decisions regarding a child's upbringing.",
     },
     {
-      word: "emancipation ",
+      word: "emancipation",
       hint: "The legal process by which a minor gains independence from their parents or guardians.",
     },
     {
