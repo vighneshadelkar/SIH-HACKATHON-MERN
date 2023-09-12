@@ -4,7 +4,6 @@ import Postdata from "../../Data/Postdata";
 import "./Feed.css";
 
 export default function Feed() {
-
   const [Posts, setPosts] = useState();
 
   useEffect(() => {
@@ -27,11 +26,13 @@ export default function Feed() {
     <div className="feed">
       <div className="feedWrapper">
         {/* <Share /> */}
-        <h2>Blogs</h2>
+        <h2 className="header">Blogs</h2>
         <hr></hr>
-        {Postdata.map((item) => {
-          return <Post key={item._id} {...item} />;
-        })}
+        <div className="posts">
+          {Postdata.map((item) => {
+            return <Post key={item._id} {...item} />;
+          })}
+        </div>
       </div>
     </div>
   );

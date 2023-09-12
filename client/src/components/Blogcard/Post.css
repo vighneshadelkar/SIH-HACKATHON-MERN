@@ -9,6 +9,18 @@
     padding: 10px;
 }
 
+.postImg{
+    border-radius: 20px;
+    width: 100%;
+    height: 190px;
+}
+
+
+.imgDiv{
+    object-fit: cover;
+    justify-content: center;
+}
+
 .postBottom{
     align-items: center;
     display: flex;

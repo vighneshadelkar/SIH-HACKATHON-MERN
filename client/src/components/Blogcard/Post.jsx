@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 // import { Person, ThumbUp } from "@mui/icons-material";
+import Img1 from "../../images/cd1.jpg"
 import "./Post.css";
 
 export default function Post(props) {
@@ -37,7 +38,7 @@ export default function Post(props) {
   },[])
 
   return (
-    <div className="post" data-aos="fade-right">
+    <div className="post" data-aos="fade-left">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postUser">
@@ -46,11 +47,15 @@ export default function Post(props) {
               {props.name}
             </h3>
           </div>
-          <span className="postTime">"mins ago"</span>
+          {/* <span className="postTime">mins ago</span> */}
         </div>
         <hr></hr>
         <div className="postContent">
+          
           <article className="postText">{props.text}</article>
+          <div className="imageDiv">
+          <img src={Img1} alt="" className="postImg" />
+          </div>
         </div>
         <hr></hr>
         <div className="postBottom">
