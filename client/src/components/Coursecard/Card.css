@@ -17,10 +17,12 @@
   .card{
     background-color: rgb(255, 255, 255);
     /* width: 100%; */
-    padding: 15px;
+    padding: 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* height: 400px; */
     gap: 10px;
   }
@@ -33,6 +35,7 @@
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
 
