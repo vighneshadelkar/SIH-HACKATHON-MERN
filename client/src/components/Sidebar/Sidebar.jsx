@@ -16,6 +16,7 @@ export default function Sidebar() {
         <NavLink to={"/profile"}>PROFILE</NavLink>
         <NavLink to={"/blogs"}>BLOGS</NavLink>
         <NavLink to={"https://kodey18.github.io/scramble-game/"}>GAMES</NavLink>
+        <NavLink to={"https://kodey18.github.io/quiz-game/"}>QUIZ</NavLink>
       </div>
     </div>
   );
