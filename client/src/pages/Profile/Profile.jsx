@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React,{useContext} from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import "./Profile.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Progress from "../../components/Progresscont/Progress";
 import Stats from "../../components/Stats/Stats";
-import { AuthUserContext } from "../../context/AuthContext";
+import { AuthUserContext } from '../../context/AuthContext';
+
 
 export default function Profile() {
-  const { AuthUser } = useContext(AuthUserContext);
+
+  const { AuthUser} = useContext(AuthUserContext);
 
   return (
     <div className="profileConatiner">

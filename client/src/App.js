@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect} from 'react';
 import Profile from './pages/Profile/Profile';
 import Coursepg from './pages/Coursespg/Coursepg';
 import Aos from "aos"
@@ -13,13 +13,6 @@ function App() {
   useEffect(() => {
     Aos.init();
   }, []);
-
-
-  const [AuthUser, setAuthUser] = useState(null);
-  const [isLoggedIn, setisLoggedIn] = useState(false);
-
-  
-
 
   return (
     <AuthUserProvider >
