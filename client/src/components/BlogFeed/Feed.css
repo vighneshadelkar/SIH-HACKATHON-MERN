@@ -8,3 +8,9 @@
     width: 60%;
     padding: 10px;
 }
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    
+}
