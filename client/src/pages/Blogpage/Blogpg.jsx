@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../../components/Sidebar/Sidebar';
 import "./Blogpg.css";
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar2 from '../../components/Navbar/Navbar2';
 import Feed from '../../components/BlogFeed/Feed';
 
 export default function Blogpg() {
@@ -10,7 +10,7 @@ export default function Blogpg() {
         <div className="blogpageWrapper">
             <Sidebar/>
             <div className="main">
-                <Navbar/>
+                <Navbar2/>
                 <Feed/>
             </div>
         </div>

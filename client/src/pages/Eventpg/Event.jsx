@@ -1,7 +1,7 @@
 import React from "react";
 import "./Event.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar2 from "../../components/Navbar/Navbar2";
 import Eventcard from "../../components/Cards/Eventcard";
 
 export default function Event() {
@@ -10,7 +10,7 @@ export default function Event() {
       <div className="eventWrapper">
         <Sidebar />
         <div className="main">
-          <Navbar />
+          <Navbar2 />
           <div className="eventList">
             <Eventcard />
             <Eventcard />

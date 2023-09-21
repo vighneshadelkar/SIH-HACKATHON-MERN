@@ -5,6 +5,19 @@
     width: fit-content;
     padding: 25px;
     border-radius: 20px;
+    
+}
+
+.cd3title{
+    background-color: rgb(248,225,210);
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(242,76,46);
+}
+
+.cd3img{
+    border-radius: 20px;
 }
 
 .date{
@@ -16,6 +29,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: rgb(242,76,46);
 }
 
 .cd3Text1{

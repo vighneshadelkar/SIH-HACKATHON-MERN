@@ -6,7 +6,7 @@
 
 .coursesWrapper{
     display: flex;
-    background-color: aqua;
+    background-color: rgb(252,239,233);
     padding: 30px;
     border-radius: 20px;
     justify-content: space-between;

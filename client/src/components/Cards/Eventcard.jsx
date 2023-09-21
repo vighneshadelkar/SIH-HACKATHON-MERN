@@ -8,12 +8,12 @@ export default function Eventcard() {
     <div className="cd3">
         <div className="cd3Wrapper" data-aos="zoom-in">
             {/* <div className="imgDiv"> */}
-                <img src={cd1} alt="" srcset="" />
+                <img src={cd1} alt="" srcset="" className='cd3img'/>
             {/* </div> */}
             <div className="cd3Text1">
-                <h2 className="title">Maths Olympiad</h2>
+                <h2 className="cd3title">Maths Olympiad</h2>
                 <p className="cd3text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                <p className="timing">8:00 AM - 11:00 AM</p>
+                <p className="cd3timing">8:00 AM - 11:00 AM</p>
             </div>
             <div className="dateDiv">
                 <h1 className="date">20</h1>
