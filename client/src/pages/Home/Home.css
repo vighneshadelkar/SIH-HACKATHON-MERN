@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Roboto&family=Titillium+Web:wght@200&display=swap');
+
+.home{
+    width: 100%;  
+    padding: 10px;
+    opacity: 1;
+    margin-top: 60px;
+}
+
+.homeimg{
+    border-radius: 20px;
+    max-width: 100%;
+}
+.homeSection1{
+    display: flex;
+    background-color: rgb(254,249,243);
+}
+
+.homeSection3{
+    display: flex;
+}
+
+.imgDiv{
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 6.5;
+}
+
+.homeTitle{
+    font-size: 50px;
+    font-weight:900px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.homeText{
+    padding: 20px;
+    flex: 5.5;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homeText3{
+    background-color: rgb(254,249,243);
+    border-radius: 20px;
+    padding: 50px;
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.explore{
+    background-color: rgb(126,181,60);
+    border: 0px;
+    padding: 20px;
+    font-size: larger;
+    color: white;
+    border-radius: 15px;
+}
+
+.cdWrapper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cdWrapper2{
+    display: flex;
+    gap: 30px;
+    width: 70%;
+}
+
+.cdWrapper3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    background-color: rgb(241, 195, 134);
+    padding: 10px;
+    border-radius: 20px;
+    /* color: white; */
+}
+.logi{
+    height: 5rem;
+    margin-top: 1.2rem;
+    margin-right: 1rem;
+}
+.logg{
+    height: 5rem;
+    border: 2.5px solid  rgba(50,126,94,255);
+    margin-top: 1.2rem;
+    margin-right: 1rem;
+    border-radius: 10rem;
+}
+
+.btn-2{
+    padding: 10px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    border: 0px;
+    font-size: larger;    
+    width: 100%;
+}
+
+.btnWrapper{
+    width: 100%;
+}
+
+
+
+
+

@@ -7,6 +7,7 @@ import Aos from "aos"
 import Login from './pages/Login/Login';
 import { AuthUserProvider } from '../src/context/AuthContext';
 import Blogpg from './pages/Blogpage/Blogpg';
+import Home from './pages/Home/Home';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route exact path="/profile" element={<Profile />}></Route>
             <Route exact path="/courses" element={<Coursepg />}></Route>
+            <Route exact path="/home" element={<Home />}></Route>
             <Route exact path="/" element={<Login />}></Route>
             <Route exact path="/blogs" element={<Blogpg />}></Route>
           </Routes>
