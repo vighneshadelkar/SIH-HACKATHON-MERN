@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+#footer{
+    display: grid;
+    margin-bottom: 0rem;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 1rem;
+    background-color: rgb(252,239,233);
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    font-family: 'Tilt Neon', cursive;
+    font-weight: 800;
+}
+#foottxt{
+    margin:.8rem 0rem;
+    /* font-weight: 400; */
+}
+#footer i{
+    padding: .7rem .4rem;
+}
+.footitem{
+    margin: .5rem 0rem;
+}
+
+.datetime {
+    font-size: 0.7rem;
+    padding: .5rem 0rem;
+    color: rgb(0, 0, 0);
+}
+
+.items {
+    color: rgb(0, 0, 0);
+    margin: 0.34rem;
+    font-size: 1.1rem;
+
+}
+.container {
+    margin: 5rem 9.5rem;
+}

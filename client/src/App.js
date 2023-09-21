@@ -9,6 +9,7 @@ import { AuthUserProvider } from '../src/context/AuthContext';
 import Blogpg from './pages/Blogpage/Blogpg';
 import Home from './pages/Home/Home';
 import Event from './pages/Eventpg/Event';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -29,6 +30,9 @@ function App() {
             <Route exact path="/event" element={<Event />}></Route>
           </Routes>
         </BrowserRouter>
+        <footer>
+          <Footer/>
+        </footer>
       </div>
     </AuthUserProvider>
   );
