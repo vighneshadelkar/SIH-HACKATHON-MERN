@@ -3,12 +3,17 @@ import "./Home.css";
 import Navbar2 from "../../components/Navbar/Navbar2";
 import Img1 from "../../images/home-img.jpg";
 import home2 from "../../images/home2.jpg";
+import Person1 from "../../images/person1.jpg";
+import Person2 from "../../images/person2.jpg";
+import Person3 from "../../images/person3.jpg";
+import Blogcard from "../../components/Blogcard/Blogcard";
 
 export default function Home() {
   return (
     <div className="home">
       <Navbar2 />
       <div className="homeWrapper">
+        {/* main home page content */}
         <section className="homeSection1">
           <div className="homeText">
             <h2>Best way to learn from anywhere.</h2>
@@ -26,6 +31,8 @@ export default function Home() {
           </div>
         </section>
         <div className="imgDiv">{/* <img src={Arrow} alt="" /> */}</div>
+
+        {/* home page cards */}
         <section className="homeSection2" data-aos="zoom-in">
           <div className="wrapper">
             <div className="cdWrapper">
@@ -98,6 +105,17 @@ export default function Home() {
                   like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* blogs section */}
+        <section className="homeSection3" data-aos="zoom-in">
+          <div className="cdWrapper">
+            <h1 className="homeTitle">Blogs</h1>
+            <div className="cdWrapper2">
+              <Blogcard image={Person2} name={"Priya"} />
+              <Blogcard image={Person1} name={"Vighnesh"} />
+              <Blogcard image={Person3} name={"Abuzaid"} />
             </div>
           </div>
         </section>

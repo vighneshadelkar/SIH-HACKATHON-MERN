@@ -20,6 +20,12 @@
     display: flex;
 }
 
+.homeSection2{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+}
+
 .imgDiv{
     object-fit: cover;
     display: flex;
@@ -64,6 +70,8 @@
     border-radius: 15px;
 }
 
+/* cards css */
+
 .cdWrapper{
     margin-top: 50px;
     display: flex;
@@ -96,6 +104,8 @@
     border-radius: 20px;
     /* color: white; */
 }
+
+
 .logi{
     height: 5rem;
     margin-top: 1.2rem;
