@@ -87,21 +87,17 @@ Authrouter.post('/login', async (req, res) => {
                 user: user._id,
                 email: user.email
             }, secretKey, {
-                expiresIn: "1h"
+                expiresIn: "2h"
             })
 
             user.token = token;
             user.password = undefined;
 
             // cookies
-
             const option = {
                 expires: new Date(Date.now() + 1000 * 60 * 60),
                 httpOnly: true
             }
-
-            // send token in user cookie
-            // res.status(200).json(user);
 
             res.status(200).cookie("token", token, option).json(user)
         }
