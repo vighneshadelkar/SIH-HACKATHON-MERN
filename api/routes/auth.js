@@ -101,14 +101,9 @@ Authrouter.post('/login', async (req, res) => {
             }
 
             // send token in user cookie
-            res.status(200).json(user);
+            // res.status(200).json(user);
 
-            res.status(200).cookie("token", token, option).json({
-                success: true
-            })
-            // res.status(200).json({
-            //     success: true
-            // })
+            res.status(200).cookie("token", token, option).json(user)
         }
     } catch (error) {
         res.status(401).json({message:"error"});

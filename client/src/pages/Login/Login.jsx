@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import loginimg from "../../images/login-pic.jpg";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthUserContext } from '../../context/AuthContext';
 import "./Login.css";
 
 export default function Login() {
@@ -10,8 +10,8 @@ export default function Login() {
     password: "",
   });
 
-  const { AuthUser, setAuthUser, isLoggedIn, setisLoggedIn } =
-    useContext(AuthContext);
+  const { AuthUser, setAuthUser} =
+    useContext(AuthUserContext);
 
   const navigate = useNavigate();
 
@@ -38,13 +38,14 @@ export default function Login() {
     });
 
     const result = await res.json();
+    console.log(result)
 
     if (!res.ok) {
-      setisLoggedIn(false);
+      // setisLoggedIn(false);
       console.error();
     } else {
       setAuthUser(result);
-      setisLoggedIn(true);
+      // setisLoggedIn(true);
       setloginData({
         email: "",
         password: "",
@@ -53,7 +54,7 @@ export default function Login() {
   };
 
   setTimeout(() => {
-    if (isLoggedIn) {
+    if (AuthUser) {
       navigate("/profile");
     }
   }, 100);
