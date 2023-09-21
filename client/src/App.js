@@ -8,6 +8,7 @@ import Login from './pages/Login/Login';
 import { AuthUserProvider } from '../src/context/AuthContext';
 import Blogpg from './pages/Blogpage/Blogpg';
 import Home from './pages/Home/Home';
+import Event from './pages/Eventpg/Event';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/blogs" element={<Blogpg />}></Route>
+            <Route exact path="/event" element={<Event />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

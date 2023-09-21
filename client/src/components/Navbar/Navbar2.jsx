@@ -30,6 +30,9 @@ export default function Navbar2() {
         <li>
           <NavLink to="https://kodey18.github.io/scramble-game/">Games</NavLink>
         </li>
+        <li>
+          <NavLink to="/event">Events</NavLink>
+        </li>
         {!AuthUser ? (
           <></>
         ) : (

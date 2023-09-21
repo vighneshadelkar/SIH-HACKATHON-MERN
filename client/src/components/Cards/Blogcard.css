@@ -1,0 +1,22 @@
+.cd2{
+    border-end-end-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+.heading{
+    padding: 10px;
+    /* background-color: antiquewhite; */
+}
+
+.cdimg{
+    border-top-left-radius: 30px;
+    max-width: 100%;
+}
+
+.cd2:hover{
+    border-end-end-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: rgb(226, 180, 120);
+}

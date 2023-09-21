@@ -6,7 +6,7 @@ import home2 from "../../images/home2.jpg";
 import Person1 from "../../images/person1.jpg";
 import Person2 from "../../images/person2.jpg";
 import Person3 from "../../images/person3.jpg";
-import Blogcard from "../../components/Blogcard/Blogcard";
+import Blogcard from "../../components/Cards/Blogcard";
 
 export default function Home() {
   return (

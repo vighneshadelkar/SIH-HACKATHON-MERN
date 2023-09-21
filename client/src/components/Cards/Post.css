@@ -1,0 +1,51 @@
+.post{
+    margin-top: 20px;
+    -webkit-box-shaow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    border-radius: 15px;
+    /* margin-left: 20%; */
+}
+
+.postWrapper{
+    padding: 10px;
+}
+
+.postImg{
+    border-radius: 20px;
+}
+
+
+.imgDiv{
+    width: fit-content;
+    object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postBottom{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postTop{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postNotLiked{
+    color: rgb(158, 200, 237);
+}
+
+.postLiked{
+    color: rgb(0, 94, 255);
+}
+
+.postUser{
+    align-items: center;
+    display: flex;
+}

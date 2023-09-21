@@ -1,0 +1,23 @@
+.eventContainer{
+    /* display: flex; */
+    width: 100%;
+}
+
+.eventWrapper{
+    display: flex;
+    /* width: 100%; */
+} 
+
+.main{
+    flex: 11;
+    width: 100%;
+    
+}
+
+.eventList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

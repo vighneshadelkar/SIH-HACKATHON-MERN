@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Post from "../Blogcard/Post";
+import Post from "../Cards/Post";
 import Postdata from "../../Data/Postdata";
 import "./Feed.css";
 

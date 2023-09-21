@@ -1,0 +1,23 @@
+.cd3Wrapper{
+    display: flex;
+    gap: 15px;
+    background-color: rgb(252,239,233);
+    width: fit-content;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.date{
+    font-size: 70px;
+}
+
+.dateDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cd3Text1{
+    font-size: larger;
+}
