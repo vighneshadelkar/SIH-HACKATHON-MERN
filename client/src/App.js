@@ -22,8 +22,8 @@ function App() {
           <Routes>
             <Route exact path="/profile" element={<Profile />}></Route>
             <Route exact path="/courses" element={<Coursepg />}></Route>
-            <Route exact path="/home" element={<Home />}></Route>
-            <Route exact path="/" element={<Login />}></Route>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/login" element={<Login />}></Route>
             <Route exact path="/blogs" element={<Blogpg />}></Route>
           </Routes>
         </BrowserRouter>

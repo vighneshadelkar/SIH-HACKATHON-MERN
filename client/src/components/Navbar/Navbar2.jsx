@@ -4,7 +4,7 @@ import { AuthUserContext } from "../../context/AuthContext";
 import { useContext } from "react";
 
 export default function Navbar2() {
-  const { setAuthUser } = useContext(AuthUserContext);
+  const { AuthUser, setAuthUser } = useContext(AuthUserContext);
 
   function Logout() {
     setAuthUser(null);
@@ -25,19 +25,37 @@ export default function Navbar2() {
           <NavLink to="/blogs">Blogs</NavLink>
         </li>
         <li>
-          <NavLink to="https://kodey18.github.io/scramble-game/">Games</NavLink>
+          <NavLink to="https://kodey18.github.io/quiz-game/">Quiz</NavLink>
         </li>
         <li>
-          <NavLink to="/proflie">Profile</NavLink>
+          <NavLink to="https://kodey18.github.io/scramble-game/">Games</NavLink>
         </li>
-        <li></li>
+        {!AuthUser ? (
+          <></>
+        ) : (
+          <li>
+            <NavLink to="/profile">Profile</NavLink>
+          </li>
+        )}
       </ul>
       <div className="logoutDiv">
-        <button className="lg-btn">
-          <NavLink className="logout-btn" onClick={Logout} to={"/"}>
-            LOGOUT
-          </NavLink>
-        </button>
+        {!AuthUser ? (
+          <>
+            <button className="lg-btn">
+              <NavLink className="logout-btn" to={"/login"}>
+                LOGIN
+              </NavLink>
+            </button>
+          </>
+        ) : (
+          <>
+            <button className="lg-btn">
+              <NavLink className="logout-btn" onClick={Logout} to={"/"}>
+                LOGOUT
+              </NavLink>
+            </button>
+          </>
+        )}
       </div>
     </nav>
   );

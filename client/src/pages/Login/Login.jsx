@@ -55,7 +55,7 @@ export default function Login() {
 
   setTimeout(() => {
     if (AuthUser) {
-      navigate("/profile");
+      navigate("/");
     }
   }, 100);
 
