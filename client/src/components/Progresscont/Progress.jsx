@@ -3,7 +3,7 @@ import "./Progress.css";
 import { AuthUserContext } from "../../context/AuthContext";
 
 export default function Progress() {
-  const {AuthUser}=useContext(AuthUserContext)
+  const { AuthUser } = useContext(AuthUserContext);
   return (
     <div className="progress" data-aos="fade-down" data-aos-duration="500">
       <div className="progressWrapper">
