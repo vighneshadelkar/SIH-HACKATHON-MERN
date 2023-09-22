@@ -11,6 +11,7 @@ import Home from "./pages/Home/Home";
 import Event from "./pages/Eventpg/Event";
 import Footer from "./components/Footer/Footer";
 import Chat from "./pages/Chat/Chat";
+import Videos from "./pages/Videospg/Videos";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
             <Route exact path="/blogs" element={<Blogpg />}></Route>
             <Route exact path="/event" element={<Event />}></Route>
             <Route exact path="/chat" element={<Chat />}></Route>
+            <Route exact path="/videos" element={<Videos />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
