@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, createContext } from "react";
+import { AuthUserContext } from "../../context/AuthContext";
 import "./Messages.css";
 
 export default function Messages({ messages }) {
-  const [incomingMessages, setincomingMessages] = useState(messages);
-  console.log(messages);
+    const {AuthUser}=createContext(AuthUserContext)
+  const [incomingMessages, setIncomingMessages] = useState([messages]);
+  console.log(incomingMessages)
+
   return (
     <>
       {incomingMessages.map((m) => {
         return (
-          <div className={true ? "messages-own" : "messages"} key={m._id}>
+          <div className={m.sender === "64831071112ee317ba2849e6" ? "messages-own" : "messages"} key={m._id}>
             <div className="messageContainer">
               <div className="messagesWrapper">
                 <p className="message">{m.text}</p>
               </div>
-              <span className="username">Vighnesh</span>
+              <span className="username">User ID: {m.sender}</span>
             </div>
           </div>
         );

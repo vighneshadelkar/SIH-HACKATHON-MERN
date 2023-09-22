@@ -4,6 +4,7 @@ import { AuthUserContext } from "../../context/AuthContext";
 
 export default function Progress() {
   const { AuthUser } = useContext(AuthUserContext);
+  console.log(AuthUser._id)
   return (
     <div className="progress" data-aos="fade-down" data-aos-duration="500">
       <div className="progressWrapper">

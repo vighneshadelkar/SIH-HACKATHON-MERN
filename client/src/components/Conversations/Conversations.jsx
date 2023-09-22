@@ -8,7 +8,6 @@ export default function Conversations({ conversations, currentUser }) {
 
   useEffect(() => {
     const friendId = conversations.members.find((m) => m !== currentUser._id);
-    console.log(friendId)
     const getUser = async () => {
       const res = await fetch("http://localhost:5000/users/" + friendId);
       const result = await res.json();

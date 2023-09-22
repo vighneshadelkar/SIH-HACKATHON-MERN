@@ -1,0 +1,30 @@
+.chat{
+    
+    /* margin-top: 20px; */
+    height: 80vh;
+}
+
+.chatWrapper{
+    margin: 10px;
+    display: flex;
+}
+
+.chatTop{
+    width: 55vw;
+    height: 80vh;
+    background-color: rgb(235, 233, 233);
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.chatbot{
+    height: 100vh;
+    width: 100%;
+    flex: 8;
+}
+
+.chatBottom{
+    margin-top: 10px;
+}

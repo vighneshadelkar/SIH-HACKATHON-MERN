@@ -1,57 +1,108 @@
-import React, { useEffect, useContext, useState } from "react";
-import { AuthUserContext } from "../../context/AuthContext";
-import "./Chat.css";
+import React, { useEffect, useContext, useState, useRef } from "react";
+import socketIOClient from "socket.io-client";
 import Conversations from "../../components/Conversations/Conversations";
+import { AuthUserContext } from "../../context/AuthContext";
 import Messages from "../../components/Messages/Messages";
+import "./Chat.css"
 
 export default function Chat() {
   const { AuthUser } = useContext(AuthUserContext);
-  const [messages, setmessages] = useState("");
-  const [currentChat, setcurrentChat] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const [currentChat, setCurrentChat] = useState(null);
   const [conversations, setConversations] = useState([]);
+  const [inputText, setInputText] = useState("");
 
-  console.log(messages);
+  const containerRef = useRef();
+  const socket = useRef(null);
+
+  const scrollDiv = (event) => {
+    const delta = Math.sign(event.deltaY);
+    containerRef.current.scrollTop += delta * 40;
+    event.preventDefault();
+  };
+
   useEffect(() => {
-    async function getMessages() {
-      let requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
+    socket.current = socketIOClient("http://localhost:9000");
 
-      const res = await fetch(
-        "http://localhost:5000/message/" + currentChat?._id,
-        requestOptions
-      );
+    socket.current.on("receiveMessage", (message) => {
+      setMessages([...messages, message]);
+    });
 
-      const result = await res.json();
+    return () => {
+      socket.current.disconnect();
+    };
+  }, [messages]);
 
-      if (res) {
-        setmessages(result);
+  useEffect(() => {
+    if (currentChat) {
+      async function getExistingMessages() {
+        try {
+          let requestOptions = {
+            method: "GET",
+            redirect: "follow",
+          };
+
+          const res = await fetch(
+            `http://localhost:9000/messages/${currentChat._id}`, // Adjust the endpoint URL
+            requestOptions
+          );
+
+          if (res.ok) {
+            const result = await res.json();
+            setMessages(result);
+          } else {
+            console.error("Error fetching messages:", res.status);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
       }
+
+      getExistingMessages();
     }
-    getMessages();
   }, [currentChat]);
 
   useEffect(() => {
-    console.log(AuthUser._id);
     async function getConversations() {
-      let requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
+      try {
+        let requestOptions = {
+          method: "GET",
+          redirect: "follow",
+        };
 
-      const res = await fetch(
-        "http://localhost:5000/conversation/" + AuthUser.id,
-        requestOptions
-      );
-      const result = await res.json();
+        const res = await fetch(
+          "http://localhost:5000/conversation/6482ee531d78242364c4bf22",
+          requestOptions
+        );
 
-      if (res) {
-        setConversations(result);
+        if (res.ok) {
+          const result = await res.json();
+          setConversations(result);
+        } else {
+          console.error("Error fetching conversations:", res.status);
+        }
+      } catch (error) {
+        console.error("Error:", error);
       }
     }
     getConversations();
   }, [AuthUser]);
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+
+    const newMessage = {
+      conversationId: currentChat._id,
+      sender: AuthUser._id,
+      text: inputText,
+    };
+    socket.current.emit("sendMessage", newMessage);
+
+    setInputText("");
+  };
+
+  console.log(currentChat);
+
   return (
     <div className="chatContainer">
       <div className="chatWrapper">
@@ -61,30 +112,34 @@ export default function Chat() {
             placeholder="Search for friends"
             className="conversatiosInput"
           ></input>
+          {conversations?.map((c) => {
+            return (
+              <div
+                className="okay"
+                key={c._id}
+                onClick={() => setCurrentChat(c)}
+              >
+                <Conversations conversations={c} currentUser={AuthUser} />
+              </div>
+            );
+          })}
         </div>
-        {conversations?.map((c) => {
-          return (
-            <div
-              className="okay"
-              key={c._id}
-              onClick={(c) => setcurrentChat(c)}
-            >
-              {console.log(c)}
-              <Conversations conversations={c} currentUser={AuthUser} />
-            </div>
-          );
-        })}
-        {/* <div className="chatbox">
+
+        <div className="chatbox">
           {currentChat ? (
             <>
-              <div className="messangerTop">
+              <div className="chatTop" ref={containerRef} onWheel={scrollDiv}>
                 {messages.map((m) => {
-                  return <Messages key={m._id} messages={messages} />;
+                  return <Messages key={m._id} messages={m} />;
                 })}
               </div>
-              <div className="messangerBottom">
-                <form >
-                  <input type="text"></input>
+              <div className="chatBottom">
+                <form onSubmit={sendMessage}>
+                  <input
+                    type="chatText"
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                  ></input>
                   <button>Send</button>
                 </form>
               </div>
@@ -92,7 +147,7 @@ export default function Chat() {
           ) : (
             <p>Join conversation </p>
           )}
-        </div> */}
+        </div>
       </div>
     </div>
   );
