@@ -5,23 +5,115 @@ import { AuthUserContext } from "../../context/AuthContext";
 import Messages from "../../components/Messages/Messages";
 import "./Chat.css";
 import Navbar2 from "../../components/Navbar/Navbar2";
+import SearchUsers from "../../components/Search/Users";
 
 export default function Chat() {
   const { AuthUser } = useContext(AuthUserContext);
   const [messages, setMessages] = useState([]);
   const [currentChat, setCurrentChat] = useState(null);
   const [conversations, setConversations] = useState([]);
+  const [count, setcount] = useState(0)
+  const [searchTerm, setSearchTerm] = useState("");
+  const [users, setusers] = useState([]);
   const [inputText, setInputText] = useState("");
+
+  
 
   const containerRef = useRef();
   const socket = useRef(null);
 
+  // scroll in message boxes
   const scrollDiv = (event) => {
     const delta = Math.sign(event.deltaY);
     containerRef.current.scrollTop += delta * 40;
     event.preventDefault();
   };
 
+  // start a conversation
+  const createConvo = async (receiverId) => {
+    console.log(receiverId)
+    const existingConvo = conversations.find(
+      (convo) =>
+        (convo.senderId === AuthUser._id && convo.receiverId === receiverId) ||
+        (convo.senderId === receiverId && convo.receiverId === AuthUser._id)
+    );
+  
+    if (existingConvo) {
+      console.log("Conversation already exists");
+      return;
+    }
+    try {
+      const newConversation = {
+        senderId: AuthUser._id,
+        receiverId: receiverId
+      };
+  
+      let requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newConversation),
+        redirect: "follow",
+      };
+  
+      let res = await fetch("http://localhost:5000/conversation/", requestOptions);
+  
+      if (res.ok) {
+        console.log("success");
+        setcount(prev=>prev+1);
+      } else {
+        console.log("error");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+  
+
+  // serach users feature
+  async function getUsers() {
+    try {
+      let requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      const res = await fetch("http://localhost:5000/users", requestOptions);
+
+      if (res.ok) {
+        const result = await res.json();
+        setusers(result);
+      } else {
+        console.error("Error fetching messages:", res.status);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
+  const filteredData = users.filter(
+    (item) =>
+      item.firstname &&
+      item.firstname.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const renderCards = (items) => {
+    return filteredData.map((item, index) => (
+      <li key={index} onClick={() => createConvo(item._id)}>
+        {item.firstname}
+      </li>
+    ));
+  };
+
+  // initalised soxket
   useEffect(() => {
     socket.current = socketIOClient("http://localhost:9000");
 
@@ -34,10 +126,12 @@ export default function Chat() {
     };
   }, [messages]);
 
+  // get all the messages on clicking on conversations
   useEffect(() => {
     if (currentChat) {
       async function getExistingMessages() {
         try {
+          console.log(currentChat._id)
           let requestOptions = {
             method: "GET",
             redirect: "follow",
@@ -51,6 +145,7 @@ export default function Chat() {
           if (res.ok) {
             const result = await res.json();
             setMessages(result);
+            console.log(result)
           } else {
             console.error("Error fetching messages:", res.status);
           }
@@ -63,6 +158,7 @@ export default function Chat() {
     }
   }, [currentChat]);
 
+  // get conversations between users
   useEffect(() => {
     async function getConversations() {
       try {
@@ -72,7 +168,7 @@ export default function Chat() {
         };
 
         const res = await fetch(
-          "http://localhost:5000/conversation/6482ee531d78242364c4bf22",
+          "http://localhost:5000/conversation/64831071112ee317ba2849e6",
           requestOptions
         );
 
@@ -87,8 +183,9 @@ export default function Chat() {
       }
     }
     getConversations();
-  }, [AuthUser]);
+  }, [AuthUser,count]);
 
+  // send message on chat
   const sendMessage = (e) => {
     e.preventDefault();
 
@@ -102,19 +199,14 @@ export default function Chat() {
     setInputText("");
   };
 
-  console.log(currentChat);
-
   return (
     <div className="chatContainer">
       <Navbar2 />
       <div className="chatWrapper">
         <div className="chatSidebar">
           <h1 className="homeTitle">Meassges</h1>
-          <input
-            type="Search"
-            placeholder="Search for friends"
-            className="conversationsInput"
-          ></input>
+          <SearchUsers handleSearch={handleSearch} />
+          {searchTerm && <ul>{renderCards(filteredData)}</ul>}
           {conversations?.map((c) => {
             return (
               <div
@@ -146,8 +238,8 @@ export default function Chat() {
                     onChange={(e) => setInputText(e.target.value)}
                   ></input>
                   <button className="chat-btn">
-                    <div class="svg-wrapper-1">
-                      <div class="svg-wrapper">
+                    <div className="svg-wrapper-1">
+                      <div className="svg-wrapper">
                         <svg
                           height="24"
                           width="24"

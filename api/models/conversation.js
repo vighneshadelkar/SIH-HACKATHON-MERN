@@ -2,7 +2,8 @@ const mongoose=require('mongoose');
 
 const ConversationSchema=mongoose.Schema({
     members:{
-        type: Array
+        type: Array,
+        required:true
     }
 },{timestamps:true});
 

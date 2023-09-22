@@ -39,13 +39,15 @@ app.post('/messages', async (req, res) => {
 });
 
 app.get('/messages/:id', async (req, res) => {
-    try {
-        const message = await Messages.find(req.params.conversationId);
+  try {
+    const message = await Messages.find({
+        conversationId: req.params.id
+    });
 
-        res.status(201).json(message)
-    } catch (error) {
-        res.status(401).json({ message: error });
-    }
+    res.status(201).json(message)
+} catch (error) {
+    res.status(401).json({ message: error });
+}
 })
 
 io.on('connection', (socket) => {

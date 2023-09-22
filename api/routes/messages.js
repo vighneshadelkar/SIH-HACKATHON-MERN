@@ -16,7 +16,9 @@ Messagerouter.post("/", async (req, res) => {
 
 Messagerouter.get('/:id', async (req, res) => {
     try {
-        const message = await Messages.find(req.params.conversationId);
+        const message = await Messages.find({
+            conversationId: req.params.conversationId
+        });
 
         res.status(201).json(message)
     } catch (error) {

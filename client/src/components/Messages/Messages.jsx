@@ -5,7 +5,6 @@ import "./Messages.css";
 export default function Messages({ messages }) {
     const {AuthUser}=createContext(AuthUserContext)
   const [incomingMessages, setIncomingMessages] = useState([messages]);
-  console.log(incomingMessages)
 
   return (
     <>

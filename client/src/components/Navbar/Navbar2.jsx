@@ -33,9 +33,11 @@ export default function Navbar2() {
         <li>
           <NavLink to="/event">Events</NavLink>
         </li>
-        <li>
-          <NavLink to="/chat">Chat</NavLink>
-        </li>
+        {AuthUser && (
+          <li>
+            <NavLink to="/chat">Chat</NavLink>
+          </li>
+        )}
         {!AuthUser ? (
           <></>
         ) : (
