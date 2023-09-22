@@ -19,18 +19,15 @@
     padding: 20px;
     margin-top: 80px;
     margin-bottom: 80px;
-    display: flex;
 }
 
 .homeSection3{
-    display: flex;
     padding: 20px;
 }
 
 .homeSection4{
     background-color: rgb(254,249,243);
     padding-bottom: 10px;
-    display: flex;
 }
 
 /* image css */

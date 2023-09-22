@@ -8,6 +8,7 @@ import Person1 from "../../images/person1.jpg";
 import Person2 from "../../images/person2.jpg";
 import Person3 from "../../images/person3.jpg";
 import Blogcard from "../../components/Cards/Blogcard";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -116,7 +117,8 @@ export default function Home() {
             <h1 className="homeTitle">Our Activites</h1>
             <div className="cdWrapper2">
               <div className="col1">
-                <div className="cd4">
+                <NavLink className="logout-btn" to={"/login"}>
+                  <div className="cd4">
                     <h2 className="cd3title">Learning Modules</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -125,8 +127,10 @@ export default function Home() {
                       Excepturi facilis molestias numquam reiciendis? Quisquam,
                       ipsum.
                     </p>
-                </div>
-                <div className="cd4">
+                  </div>
+                </NavLink>
+                <NavLink className="logout-btn" to={"/login"}>
+                  <div className="cd4">
                     <h2 className="cd3title">Games</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -136,12 +140,14 @@ export default function Home() {
                       ipsum.
                     </p>
                   </div>
+                </NavLink>
               </div>
               <div className="col2">
                 <img src={home3} alt="home img" className="homeimg3" />
               </div>
               <div className="col3">
-                <div className="cd4">
+                <NavLink className="logout-btn" to={"/event"}>
+                  <div className="cd4">
                     <h2 className="cd3title">Special Events</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -150,8 +156,10 @@ export default function Home() {
                       Excepturi facilis molestias numquam reiciendis? Quisquam,
                       ipsum.
                     </p>
-                </div>
-                <div className="cd4">
+                  </div>
+                </NavLink>
+                <NavLink className="logout-btn" to={"/login"}>
+                  <div className="cd4">
                     <h2 className="cd3title">Quizes</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -161,6 +169,7 @@ export default function Home() {
                       ipsum.
                     </p>
                   </div>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -169,7 +178,7 @@ export default function Home() {
         {/* blogs section */}
         <section className="homeSection3" data-aos="zoom-in">
           <div className="cdWrapper">
-            <h1 className="homeTitle">Blogs</h1>
+            <h1 className="homeTitle">Experts</h1>
             <div className="cdWrapper2">
               <Blogcard image={Person2} name={"Priya"} />
               <Blogcard image={Person1} name={"Vighnesh"} />
