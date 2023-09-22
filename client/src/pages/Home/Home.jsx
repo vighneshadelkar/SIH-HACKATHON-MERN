@@ -85,6 +85,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* about us */}
         <section className="homeSection3" data-aos="zoom-in">
           <div className="cdWrapper">
             <h1 className="homeTitle">About Us</h1>
@@ -118,7 +120,7 @@ export default function Home() {
             <div className="cdWrapper2">
               <div className="col1">
                 <NavLink className="logout-btn" to={"/login"}>
-                  <div className="cd4">
+                  <div className="cd4" data-aos="zoom-in">
                     <h2 className="cd3title">Learning Modules</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -130,7 +132,7 @@ export default function Home() {
                   </div>
                 </NavLink>
                 <NavLink className="logout-btn" to={"/login"}>
-                  <div className="cd4">
+                  <div className="cd4" data-aos="zoom-in">
                     <h2 className="cd3title">Games</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -147,7 +149,7 @@ export default function Home() {
               </div>
               <div className="col3">
                 <NavLink className="logout-btn" to={"/event"}>
-                  <div className="cd4">
+                  <div className="cd4" data-aos="zoom-in">
                     <h2 className="cd3title">Special Events</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -159,7 +161,7 @@ export default function Home() {
                   </div>
                 </NavLink>
                 <NavLink className="logout-btn" to={"/login"}>
-                  <div className="cd4">
+                  <div className="cd4" data-aos="zoom-in">
                     <h2 className="cd3title">Quizes</h2>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -186,7 +188,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer>{/* <Footer /> */}</footer>
+
       </div>
     </div>
   );
