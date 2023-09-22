@@ -3,14 +3,12 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
-    
-
 }
+
 .messages-own{
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 5px;
-
 }
 
 .messagesWrapper

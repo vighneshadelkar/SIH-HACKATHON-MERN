@@ -1,11 +1,23 @@
 .conversations{
     flex: 4;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 }
 
-.conversatiosInput{
+.conversationsInput{
     width: 100%;
     margin: 2px;
     padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.conversationsWrapper{
+    padding: 10px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

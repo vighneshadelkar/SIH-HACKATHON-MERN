@@ -31,7 +31,6 @@ function App() {
             <Route exact path="/chat" element={<Chat />}></Route>
           </Routes>
         </BrowserRouter>
-        {/* <Footer /> */}
       </div>
     </AuthUserProvider>
   );

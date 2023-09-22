@@ -3,7 +3,8 @@ import socketIOClient from "socket.io-client";
 import Conversations from "../../components/Conversations/Conversations";
 import { AuthUserContext } from "../../context/AuthContext";
 import Messages from "../../components/Messages/Messages";
-import "./Chat.css"
+import "./Chat.css";
+import Navbar2 from "../../components/Navbar/Navbar2";
 
 export default function Chat() {
   const { AuthUser } = useContext(AuthUserContext);
@@ -43,7 +44,7 @@ export default function Chat() {
           };
 
           const res = await fetch(
-            `http://localhost:9000/messages/${currentChat._id}`, // Adjust the endpoint URL
+            `http://localhost:9000/messages/${currentChat._id}`,
             requestOptions
           );
 
@@ -105,12 +106,14 @@ export default function Chat() {
 
   return (
     <div className="chatContainer">
+      <Navbar2 />
       <div className="chatWrapper">
-        <div>
+        <div className="chatSidebar">
+          <h1 className="homeTitle">Meassges</h1>
           <input
             type="Search"
             placeholder="Search for friends"
-            className="conversatiosInput"
+            className="conversationsInput"
           ></input>
           {conversations?.map((c) => {
             return (
@@ -134,18 +137,38 @@ export default function Chat() {
                 })}
               </div>
               <div className="chatBottom">
-                <form onSubmit={sendMessage}>
+                <form onSubmit={sendMessage} className="chatForm">
                   <input
                     type="chatText"
                     value={inputText}
+                    className="chatInput"
+                    placeholder="Messages...."
                     onChange={(e) => setInputText(e.target.value)}
                   ></input>
-                  <button>Send</button>
+                  <button className="chat-btn">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg
+                          height="24"
+                          width="24"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0h24v24H0z" fill="none"></path>
+                          <path
+                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Send</span>
+                  </button>
                 </form>
               </div>
             </>
           ) : (
-            <p>Join conversation </p>
+            <p className="joinConvo">Join conversation </p>
           )}
         </div>
       </div>
