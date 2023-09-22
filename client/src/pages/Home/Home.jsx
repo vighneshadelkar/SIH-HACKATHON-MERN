@@ -3,6 +3,7 @@ import "./Home.css";
 import Navbar2 from "../../components/Navbar/Navbar2";
 import Img1 from "../../images/home-img.jpg";
 import home2 from "../../images/home2.jpg";
+import home3 from "../../images/home3.jpg";
 import Person1 from "../../images/person1.jpg";
 import Person2 from "../../images/person2.jpg";
 import Person3 from "../../images/person3.jpg";
@@ -108,6 +109,63 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* activites section */}
+        <section className="homeSection4">
+          <div className="cdWrapper">
+            <h1 className="homeTitle">Our Activites</h1>
+            <div className="cdWrapper2">
+              <div className="col1">
+                <div className="cd4">
+                    <h2 className="cd3title">Learning Modules</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid molestias dolores dolore dicta. Enim voluptatum
+                      quam vero tempora laboriosam aut ratione sint architecto.
+                      Excepturi facilis molestias numquam reiciendis? Quisquam,
+                      ipsum.
+                    </p>
+                </div>
+                <div className="cd4">
+                    <h2 className="cd3title">Games</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid molestias dolores dolore dicta. Enim voluptatum
+                      quam vero tempora laboriosam aut ratione sint architecto.
+                      Excepturi facilis molestias numquam reiciendis? Quisquam,
+                      ipsum.
+                    </p>
+                  </div>
+              </div>
+              <div className="col2">
+                <img src={home3} alt="home img" className="homeimg3" />
+              </div>
+              <div className="col3">
+                <div className="cd4">
+                    <h2 className="cd3title">Special Events</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid molestias dolores dolore dicta. Enim voluptatum
+                      quam vero tempora laboriosam aut ratione sint architecto.
+                      Excepturi facilis molestias numquam reiciendis? Quisquam,
+                      ipsum.
+                    </p>
+                </div>
+                <div className="cd4">
+                    <h2 className="cd3title">Quizes</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid molestias dolores dolore dicta. Enim voluptatum
+                      quam vero tempora laboriosam aut ratione sint architecto.
+                      Excepturi facilis molestias numquam reiciendis? Quisquam,
+                      ipsum.
+                    </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* blogs section */}
         <section className="homeSection3" data-aos="zoom-in">
           <div className="cdWrapper">
