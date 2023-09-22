@@ -15,7 +15,7 @@ export default function Profile() {
           <Navbar2 />
           <h2>My Progress</h2>
           <Progress />
-          <div className="container">
+          <div className="statscontainer">
             <h2>Statistics</h2>
             <Stats />
           </div>

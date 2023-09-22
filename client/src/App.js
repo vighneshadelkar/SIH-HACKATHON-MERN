@@ -29,7 +29,7 @@ function App() {
             <Route exact path="/event" element={<Event />}></Route>
           </Routes>
         </BrowserRouter>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </AuthUserProvider>
   );
