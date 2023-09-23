@@ -237,7 +237,7 @@ export default function Chat() {
             <>
               <div className="chatTop" ref={containerRef} onWheel={scrollDiv}>
                 {messages.map((m) => {
-                  return <Messages key={m._id} messages={m} />;
+                  return <Messages key={m._id} messages={m} user={AuthUser}/>;
                 })}
               </div>
               <div className="chatBottom">
@@ -246,7 +246,7 @@ export default function Chat() {
                     type="chatText"
                     value={inputText}
                     className="chatInput"
-                    placeholder="Messages...."
+                    placeholder="Messages..."
                     onChange={(e) => setInputText(e.target.value)}
                   ></input>
                   <button className="chat-btn">

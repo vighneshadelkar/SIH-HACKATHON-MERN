@@ -43,6 +43,7 @@ export default function Login() {
       console.error();
     } else {
       setAuthUser(result);
+      console.log(result)
       setloginData({
         email: "",
         password: "",

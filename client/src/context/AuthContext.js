@@ -16,7 +16,7 @@ const AuthUserProvider = ({ children }) => {
     if (AuthUser) {
       localStorage.setItem('AuthUser', JSON.stringify(AuthUser));
     } else {
-      localStorage.removeItem('AuthUser'); // Remove stored user data on logout
+      localStorage.removeItem('AuthUser'); 
     }
   }, [AuthUser]);
 
