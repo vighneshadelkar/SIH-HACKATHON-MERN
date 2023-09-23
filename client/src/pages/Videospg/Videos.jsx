@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import "./Videos.css";
 import Navbar2 from "../../components/Navbar/Navbar2";
+import Video1 from "../../videos/1st.mp4";
+import Video2 from "../../videos/2nd.mp4";
+import Video3 from "../../videos/3rd.mp4";
+import vd1img from "../../images/video1img.jpg";
+import vd2img from "../../images/video2img.jpg";
+import vd3img from "../../images/video3img.jpg";
+import "./Videos.css";
 
 export default function Videos() {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -8,51 +14,44 @@ export default function Videos() {
   const videoData = [
     {
       id: 1,
-      title: "Video 1",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
+      title: "Child Rights Awareness",
+      image: vd1img,
+      url: Video1,
     },
     {
       id: 2,
-      title: "Video 2",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
+      title: "Right To Freedom",
+      image: vd2img,
+      url: Video2,
     },
     {
       id: 3,
-      title: "Video 3",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
+      title: "The Little Activist",
+      image: vd3img,
+      url: Video3,
     },
     {
       id: 4,
-      title: "Video 4",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
+      title: "Child Rights Awareness",
+      image: vd1img,
+      url: Video1,
     },
     {
       id: 5,
-      title: "Video 5",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
+      title: "Right To Freedom",
+      image: vd2img,
+      url: Video2,
     },
     {
       id: 6,
-      title: "Video 6",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
-    },
-    {
-      id: 7,
-      title: "Video 1",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
-    },
-    {
-      id: 8,
-      title: "Video 2",
-      url: "https://img.youtube.com/vi/j_5hW7d0YCQ/hqdefault.jpg",
-    },
+      title: "The Little Activist",
+      image: vd3img,
+      url: Video3,
+    }
   ];
 
   const handleVideoClick = (video) => {
-    const url = video.url;
-    const videoId = url.match(/\/vi\/([^/]+)/)[1];
-    setSelectedVideo(videoId);
-    console.log(selectedVideo);
+    setSelectedVideo(video);
   };
 
   const closeModal = () => {
@@ -61,36 +60,38 @@ export default function Videos() {
   return (
     <div className="videoContainer">
       <Navbar2 />
-      <h2 className="homeTitle">Modules</h2>
-      <div className="videoWrapper">
-        {videoData.map((video) => (
-          <div
-            className="video-card"
-            key={video.id}
-            onClick={() => handleVideoClick(video)}
-          >
-            <h3>{video.title}</h3>
-            <img src={video.url} alt={video.title} />
-          </div>
-        ))}
-        {selectedVideo && (
-          <div className="modal">
-            <div className="modal-content">
-              <button className="close-btn" onClick={closeModal}>
-                <span className="X"></span>
-                <span className="Y"></span>
-                <div className="close">Close</div>
-              </button>
-              <iframe
-                width="800"
-                height="500"
-                src={`https://www.youtube.com/embed/${selectedVideo}`}
-                title={selectedVideo.title}
-                allowFullScreen
-              />
+      <div className="cdWrapper">
+        <h2 className="homeTitle">Modules</h2>
+        <div className="videoWrapper">
+          {videoData.map((video) => (
+            <div
+              className="video-card"
+              key={video.id}
+              onClick={() => handleVideoClick(video)}
+            >
+              <h3>{video.title}</h3>
+              <img src={video.image} alt={video.title} />
             </div>
-          </div>
-        )}
+          ))}
+          {selectedVideo && (
+            <div className="modal">
+              <div className="modal-content">
+                <button className="close-btn" onClick={closeModal}>
+                  <span className="X"></span>
+                  <span className="Y"></span>
+                  <div className="close">Close</div>
+                </button>
+                <iframe
+                  width="800"
+                  height="500"
+                  src={selectedVideo.url}
+                  title={selectedVideo.title}
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
