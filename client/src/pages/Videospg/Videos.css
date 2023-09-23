@@ -15,19 +15,13 @@
 
 .video-card {
   cursor: pointer;
-  max-height: 100%;
-  width: 25vw;
+  width: 30vw;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 5px rgb(160, 160, 160);
   border-radius: 10px;
   padding: 10px;
   text-align: center;
-  position: relative; /* Added */
-}
-
-.videoImg {
-  width: 100%;
-  border-radius: 10px;
+  position: relative; 
 }
 
 .video-card video {
@@ -48,8 +42,8 @@
 
 .video-card:hover {
   cursor: pointer;
-  max-height: 100%;
-  width: 25vw;
+  /* height: 50vh; */
+  width: 30vw;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 5px rgb(160, 160, 160);
   border-radius: 10px;

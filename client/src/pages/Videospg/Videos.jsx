@@ -70,7 +70,6 @@ export default function Videos() {
               key={video.id}
               onClick={() => handleVideoClick(video)}
             >
-              <h3>{video.title}</h3>
               <video
                 width="800"
                 height="500"
@@ -86,6 +85,7 @@ export default function Videos() {
                 alt={video.title}
                 className="videoImg"
               />
+              <h3>{video.title}</h3>
             </div>
           ))}
           {selectedVideo && (
