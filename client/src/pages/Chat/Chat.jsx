@@ -6,20 +6,19 @@ import Messages from "../../components/Messages/Messages";
 import "./Chat.css";
 import Navbar2 from "../../components/Navbar/Navbar2";
 import SearchUsers from "../../components/Search/Users";
+import Person1 from "../../images/person1.jpg";
 
 export default function Chat() {
   const { AuthUser } = useContext(AuthUserContext);
   const [messages, setMessages] = useState([]);
   const [currentChat, setCurrentChat] = useState(null);
   const [conversations, setConversations] = useState([]);
-  const [count, setcount] = useState(0)
+  const [count, setcount] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
   const [users, setusers] = useState([]);
   const [inputText, setInputText] = useState("");
   const containerRef = useRef();
   const socket = useRef(null);
-
-  console.log(AuthUser);
 
   // scroll in message boxes
   const scrollDiv = (event) => {
@@ -30,13 +29,13 @@ export default function Chat() {
 
   // start a conversation
   const createConvo = async (receiverId) => {
-    console.log(receiverId)
+    console.log(receiverId);
     const existingConvo = conversations.find(
       (convo) =>
         (convo.senderId === AuthUser._id && convo.receiverId === receiverId) ||
         (convo.senderId === receiverId && convo.receiverId === AuthUser._id)
     );
-  
+
     if (existingConvo) {
       console.log("Conversation already exists");
       return;
@@ -44,9 +43,9 @@ export default function Chat() {
     try {
       const newConversation = {
         senderId: AuthUser._id,
-        receiverId: receiverId
+        receiverId: receiverId,
       };
-  
+
       let requestOptions = {
         method: "POST",
         headers: {
@@ -55,12 +54,15 @@ export default function Chat() {
         body: JSON.stringify(newConversation),
         redirect: "follow",
       };
-  
-      let res = await fetch("http://localhost:5000/conversation/", requestOptions);
-  
+
+      let res = await fetch(
+        "http://localhost:5000/conversation/",
+        requestOptions
+      );
+
       if (res.ok) {
         console.log("success");
-        setcount(prev=>prev+1);
+        setcount((prev) => prev + 1);
       } else {
         console.log("error");
       }
@@ -68,9 +70,8 @@ export default function Chat() {
       console.error("Error:", error);
     }
   };
-  
 
-  // serach users feature
+  // search users feature
   async function getUsers() {
     try {
       let requestOptions = {
@@ -107,7 +108,7 @@ export default function Chat() {
   const renderCards = (items) => {
     return filteredData.map((item, index) => (
       <li key={index} onClick={() => createConvo(item._id)}>
-        {item.firstname}
+        {item.firstname + " " + item.lastname}
       </li>
     ));
   };
@@ -130,7 +131,7 @@ export default function Chat() {
     if (currentChat) {
       async function getExistingMessages() {
         try {
-          console.log(currentChat._id)
+          console.log(currentChat._id);
           let requestOptions = {
             method: "GET",
             redirect: "follow",
@@ -144,7 +145,7 @@ export default function Chat() {
           if (res.ok) {
             const result = await res.json();
             setMessages(result);
-            console.log(result)
+            console.log(result);
           } else {
             console.error("Error fetching messages:", res.status);
           }
@@ -182,7 +183,7 @@ export default function Chat() {
       }
     }
     getConversations();
-  }, [AuthUser,count]);
+  }, [AuthUser, count]);
 
   // send message on chat
   const sendMessage = (e) => {
@@ -203,7 +204,6 @@ export default function Chat() {
       <Navbar2 />
       <div className="chatWrapper">
         <div className="chatSidebar">
-          <h1 className="homeTitle">Meassges</h1>
           <SearchUsers handleSearch={handleSearch} />
           {searchTerm && <ul>{renderCards(filteredData)}</ul>}
           {conversations?.map((c) => {
@@ -213,13 +213,26 @@ export default function Chat() {
                 key={c._id}
                 onClick={() => setCurrentChat(c)}
               >
-                <Conversations conversations={c} currentUser={AuthUser} />
+                <Conversations conversations={c} currentUser={AuthUser}/>
               </div>
             );
           })}
         </div>
 
         <div className="chatbox">
+          {/* {
+            currentChat && (
+              <>
+            <div className="userNameDiv">
+              <div className="profImgDiv">
+                <img src={Person1} alt="" className="profImg" />
+              </div>
+              <h2>{conversations.firstname + " " + currentChat.lastname}</h2>
+            </div>
+          </>
+            )
+          } */}
+          
           {currentChat ? (
             <>
               <div className="chatTop" ref={containerRef} onWheel={scrollDiv}>

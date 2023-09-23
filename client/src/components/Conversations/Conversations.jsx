@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Conversations.css";
 
-export default function Conversations({ conversations, currentUser }) {
+export default function Conversations({
+  conversations,
+  currentUser,
+}) {
   const [user, setUser] = useState({
     firstname: "",
+    lastname: "",
   });
 
   useEffect(() => {
@@ -21,12 +25,12 @@ export default function Conversations({ conversations, currentUser }) {
       }
     };
     getUser();
-  }, [currentUser,conversations]);
+  }, [currentUser, conversations]);
 
   return (
     <div className="conversations">
       <div className="conversationsWrapper">
-        <span>{user.firstname}</span>
+        <span>{user.firstname + " " + user.lastname}</span>
       </div>
     </div>
   );

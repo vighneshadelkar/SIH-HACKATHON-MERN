@@ -3,7 +3,7 @@ import React from "react";
 
 const SearchUsers = ({ handleSearch }) => {
   return (
-    <div className="sear">
+    <div className="search">
       <input
         type="Search"
         placeholder="Search for friends"
