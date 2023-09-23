@@ -64,7 +64,7 @@ export default function Login() {
         </div>
         <div className="formContainer">
           <div>
-            <h2>SIGN UP</h2>
+            <h2>Welcome Back!! SIGN UP</h2>
           </div>
           <hr></hr>
           <form onSubmit={handleSubmit} className="loginForm">
