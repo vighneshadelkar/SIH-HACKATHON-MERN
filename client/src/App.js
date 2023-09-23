@@ -12,6 +12,7 @@ import Event from "./pages/Eventpg/Event";
 import Footer from "./components/Footer/Footer";
 import Chat from "./pages/Chat/Chat";
 import Videos from "./pages/Videospg/Videos";
+import Signup from "./pages/Login/Signup";
 
 function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/event" element={<Event />}></Route>
             <Route exact path="/chat" element={<Chat />}></Route>
             <Route exact path="/videos" element={<Videos />}></Route>
+            <Route exact path="/signup" element={<Signup />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

@@ -22,16 +22,12 @@
   .video-card img {
     width: 100%;
     border-radius: 10px;
-    /* max-height: 150px; */
-    /* object-fit: cover; */
   }
 
   .video-card img:hover {
     width: 100%;
     border-radius: 10px;
     scale: 1.03;
-    /* max-height: 150px; */
-    /* object-fit: cover; */
   }
   
   .modal {
@@ -52,9 +48,8 @@
     margin: 7% auto;
     padding: 20px;
     border: 1px solid #888;
-    height: 70%;
-    width: 80%;
-    /* max-width: 800px; */
+    height: 69%;
+    width: 59%;
   }
   
   .close-btn {
@@ -67,7 +62,6 @@
   }
   
   .X {
-    /* content: ''; */
     color: #000;
     position: absolute;
     top: 50%;
@@ -79,7 +73,6 @@
   }
   
   .Y {
-    content: '';
     position: absolute;
     top: 50%;
     left: 33%;

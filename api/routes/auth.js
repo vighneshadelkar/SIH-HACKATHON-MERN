@@ -36,7 +36,6 @@ Authrouter.post('/register', async (req, res) => {
             lastname,
             email,
             password: encryptedPass,
-            token: token
         })
 
         // creates jwt token
@@ -59,7 +58,7 @@ Authrouter.post('/register', async (req, res) => {
         res.status(200).json(savedUser);
 
     } catch (error) {
-        res.status(401).json({message:error});
+        res.status(401).json({message: "error"});
     }
 })
 
