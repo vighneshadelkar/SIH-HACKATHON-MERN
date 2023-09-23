@@ -57,6 +57,7 @@ export default function Videos() {
   const closeModal = () => {
     setSelectedVideo(null);
   };
+
   return (
     <div className="videoContainer">
       <Navbar2 />
@@ -70,7 +71,21 @@ export default function Videos() {
               onClick={() => handleVideoClick(video)}
             >
               <h3>{video.title}</h3>
-              <img src={video.image} alt={video.title} />
+              <video
+                width="800"
+                height="500"
+                className="hidden-video"
+                src={video.url}
+                title={video.title}
+                controls
+                muted
+                autoPlay
+              />
+              <img
+                src={video.image}
+                alt={video.title}
+                className="videoImg"
+              />
             </div>
           ))}
           {selectedVideo && (
