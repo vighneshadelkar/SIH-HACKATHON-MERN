@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import loginimg from "../../images/login-pic.jpg";
-import { useNavigate } from "react-router-dom";
+import loginimg from "../../images/login-pic2.jpg";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthUserContext } from "../../context/AuthContext";
 import "./Login.css";
 
@@ -65,7 +65,7 @@ export default function Signup() {
           <img src={loginimg} alt="login img" className="login-img" />
         </div>
         <div className="formContainer">
-          <h2>WELCOME BACK !!</h2>
+          <h2>Sign Up</h2>
           <form onSubmit={handleSubmit} className="loginForm">
             <div className="col-sm-10">
               <input
@@ -117,8 +117,9 @@ export default function Signup() {
               />
             </div>
 
-            <button className="signupSubmit">Submit</button>
+            <button className="signupSubmit">Sign Up</button>
           </form>
+        <p>Dont have an account? <span ><NavLink to={"/login"} className="link">Sign In</NavLink></span></p> 
         </div>
       </div>
     </div>

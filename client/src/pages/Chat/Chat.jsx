@@ -16,11 +16,10 @@ export default function Chat() {
   const [searchTerm, setSearchTerm] = useState("");
   const [users, setusers] = useState([]);
   const [inputText, setInputText] = useState("");
-
-  
-
   const containerRef = useRef();
   const socket = useRef(null);
+
+  console.log(AuthUser);
 
   // scroll in message boxes
   const scrollDiv = (event) => {
@@ -168,7 +167,7 @@ export default function Chat() {
         };
 
         const res = await fetch(
-          "http://localhost:5000/conversation/64831071112ee317ba2849e6",
+          `http://localhost:5000/conversation/${AuthUser._id}`,
           requestOptions
         );
 
