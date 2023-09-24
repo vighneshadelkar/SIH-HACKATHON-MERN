@@ -1,0 +1,58 @@
+.ldContainer{
+    width: 100%;
+}
+
+.ldWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ldList {
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+    background-color: aliceblue;
+  }
+
+  .heading{
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    width: 50%;
+    gap: 10px;
+    background-color: aliceblue;
+  }
+
+  .ldItem {
+    width: 50%;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: rgb(1, 136, 255);
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: white;
+  }
+  
+  .rank {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 25px; 
+
+  }
+  
+  .playerName {
+    font-size: 25px; 
+  }
+  

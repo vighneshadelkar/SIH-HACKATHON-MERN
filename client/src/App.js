@@ -11,6 +11,7 @@ import Event from "./pages/Eventpg/Event";
 import Chat from "./pages/Chat/Chat";
 import Videos from "./pages/Videospg/Videos";
 import Signup from "./pages/Login/Signup";
+import Leaderboard from "./pages/Leaderboard/Leaderboard";
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/chat" element={<Chat />}></Route>
             <Route exact path="/videos" element={<Videos />}></Route>
             <Route exact path="/signup" element={<Signup />}></Route>
+            <Route exact path="/leaderboard" element={<Leaderboard />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
