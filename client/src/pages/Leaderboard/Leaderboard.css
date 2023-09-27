@@ -1,58 +1,155 @@
 .ldContainer{
-    width: 100%;
+  width: 100%;
+  display: flex;
+  gap: 50px;
 }
 
 .ldWrapper{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ldList {
-    list-style-type: none;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    gap: 10px;
-    background-color: aliceblue;
-  }
+  list-style-type: none;
+  padding: 20px;
+  /* border-radius: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  gap: 10px;
+  background-color: rgb(249,203,135);
+}
 
-  .heading{
-    list-style-type: none;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    width: 50%;
-    gap: 10px;
-    background-color: aliceblue;
-  }
+.heading{
+  list-style-type: none;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  width: 50%;
+  gap: 10px;
+  background-color: antiquewhite;
+}
 
-  .ldItem {
-    width: 50%;
-    margin-bottom: 5px;
-    padding: 10px;
-    background-color: rgb(1, 136, 255);
-    border-radius: 10px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    color: white;
-  }
-  
-  .rank {
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 25px; 
+.ldItem {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-  }
-  
-  .playerName {
-    font-size: 25px; 
-  }
-  
+.rank {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 25px; 
+}
+
+.playerName {
+  font-size: 25px; 
+}
+
+.profImgDiv{
+  object-fit: cover;
+  object-position: center;
+  width: 50px;
+  height: 50px;
+}
+
+.profImg{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.rankLadder {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/*  leaderboard div*/
+
+.ldItem1{
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  /* gap: 20px; */
+  align-items: center;
+}
+
+.top3Div{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+.top3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  align-self: flex-end; 
+  gap: 5px;
+}
+
+.first{
+  width: 100%;
+  height: 400px;
+  background-color: #ffd700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+}
+
+.second{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(192, 192, 192);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+}
+
+.third{
+  width: 100%;
+  height: 200px;
+  background-color: rgb(205,127,50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+
+}
+
+.points{
+  font-weight: 700;
+}
+
+/* leaderboard image */
+.imgDiv{
+  width: 70%;
+  object-fit: cover;
+}
+
+.ldImage{
+  max-width: 100%;
+  border-radius: 50%;
+}
